@@ -253,7 +253,7 @@
     <div>
         <h1 class="madimi-one-regular" style="text-align:center; color:rgb(65, 65, 65)"><b>План помещения</b></h1><br>
         <img src="{{ url('/images/room1.jpg') }}"
-            style="width: 80%; border-style: solid; border-color: rgb(102, 102, 102); display: block; margin-left: auto; margin-right: auto">
+            style="width: 50%; border-style: solid; border-color: rgb(102, 102, 102); display: block; margin-left: auto; margin-right: auto">
         <br><br><br>
     </div>
 

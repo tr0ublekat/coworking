@@ -55,25 +55,6 @@ class MainController extends Controller
         return view('reserve', ['reserves' => $reserves]);
     }
 
-    public function reserve_check(Request $request)
-    {
-        $valid = $request->validate([
-            'userdate' => 'required',
-            'usertime' => 'required',
-            'userplace' => 'required',
-        ]);
-
-        $reserve = new ReserveModel();
-        $reserve->data = $request->input('userdate');
-        $reserve->reserve_time = $request->input('usertime');
-        $reserve->slot_id = $request->input('userplace');
-        $reserve->UIDs = $request->input('userids');
-
-        $reserve->save();
-
-        return redirect()->route('reserve');
-    }
-
     public function reserve_check_2(Request $request)
     {
         $valid = $request->validate([
@@ -112,3 +93,4 @@ class MainController extends Controller
         return view('reserve', ['userdate' => $userdate, 'userplace' => $userplace, 'reserves' => ReserveModel::all()]);
     }
 }
+
